@@ -176,7 +176,8 @@ public class CodePush implements ReactPackage {
     }
 
     public String getAssetsBundleFileName() {
-        return mAssetsBundleFileName;
+        String[] paths = mAssetsBundleFileName.split("/");
+        return paths[paths.length - 1];
     }
 
     public String getPublicKey() {
